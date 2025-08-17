@@ -1,36 +1,39 @@
-# 🌟 Glass Effect Card
+# ⛅ Weather Control App
 
-A modern, reusable card component with a sleek **glassmorphism effect**.
-Perfect for showcasing user profiles, team members, or personal portfolios.
+A fun and interactive **Weather Control UI** built with a modern glassmorphism design.  
+This app allows you to toggle between different weather conditions with a clean and responsive interface.
 
 ---
 
 ## ✨ Features
 
-- 🎨 Glassmorphism UI (blur + transparency)
-- 📱 Fully responsive & customizable
-- 🧩 Easy to integrate into any project
-- 👤 Supports profile image, name, role, and social links
-- ⚡ Lightweight and clean design
+- 🌞 Switch between **Sunny** and **Rainy** base conditions
+- ☁️ Add extra effects like **Cloudy** or ⚡ **Lightning**
+- 🎨 Sleek **Glassmorphism UI**
+- 📱 Fully responsive – works great on mobile
+- ⚡ Built with modern frontend stack
 
 ---
 
 ## 📸 Preview
 
-![Preview Screenshot](./preview.png)
+![App Screenshot](./preview.png)
 
 ---
 
 ## 🔧 Installation
 
+Clone the repository and run it locally:
+
 ```bash
 # Clone this repo
-git clone https://github.com/readyuicomponent/glass-card.git
+git clone https://github.com/readyuicomponent/glass-weather.git
 
-# Navigate into the folder
-cd glass-card
+# Navigate into the project
+cd glass-weather
 
-# Install with your package manager ( like npm, pnpm, yarn, etc. )
-npm i
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-```

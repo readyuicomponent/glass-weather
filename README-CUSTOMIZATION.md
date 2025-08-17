@@ -1,59 +1,115 @@
-# I’d truly appreciate it if you credit my work. If you’d like to support me further, you can buy me a coffee
+# I’d truly appreciate it if you credit my work.  
+If you’d like to support me further, you can buy me a coffee ☕  
 
-# Profile Card Customization Guide
+---
 
-This profile card is designed to be easily customizable by editing the `data/profile-config.json` file. No coding knowledge required!
+# 🌦️ Weather Control Customization Guide
 
-## How to Customize
+This Weather Control App is fully customizable by editing the `data/weather-config.json` file. No coding knowledge required!  
 
-### 1. Personal Information
-Edit the `profile` section in `data/profile-config.json`:
+Everything from the **base weather**, **extra effects**, and even **UI labels & gradients** can be changed here.
 
-\`\`\`json
-"profile": {
-  "name": "Your Name",
-  "title": "Your Job Title", 
-  "description": "Your description here",
-  "profileImage": "/images/your-photo.png",
-  "hireUrl": "/contact"
-}
-\`\`\`
+---
 
-### 2. Social Media Links
-Add or remove social platforms in the `socialLinks` array:
+## ⚙️ Configuration
 
-\`\`\`json
-"socialLinks": [
-  {
-    "platform": "twitter",
-    "url": "https://twitter.com/yourusername"
+Here’s the structure of `weather-config.json`:
+
+```json
+{
+  "baseWeather": {
+    "sunny": {
+      "label": "Sunny",
+      "icon": "☀️",
+      "background": "from-sky-400 via-blue-500 to-cyan-400"
+    },
+    "rainy": {
+      "label": "Rainy",
+      "icon": "🌧️",
+      "background": "from-slate-700 via-blue-900 to-indigo-950"
+    }
+  },
+  "weatherEffects": {
+    "cloudy": {
+      "label": "Cloudy",
+      "icon": "☁️",
+      "effects": [
+        {
+          "emoji": "☁️",
+          "size": "text-8xl",
+          "position": "top-2 left-8",
+          "opacity": "opacity-90",
+          "animation": {
+            "x": [0, 30, 0],
+            "y": [0, -8, 0],
+            "duration": 6,
+            "delay": 0
+          }
+        }
+      ]
+    },
+    "lightning": {
+      "label": "Lightning",
+      "icon": "⚡",
+      "effects": [
+        {
+          "emoji": "⚡",
+          "size": "text-7xl",
+          "position": "top-4 left-1/4",
+          "animation": {
+            "opacity": [0, 1, 0],
+            "scale": [0.8, 1.4, 0.8],
+            "duration": 0.4,
+            "repeatDelay": 2.5
+          }
+        }
+      ]
+    }
+  },
+  "ui": {
+    "title": "Weather Control",
+    "baseLabel": "Base Condition",
+    "effectsLabel": "Additional Effects",
+    "currentWeatherLabel": "Current Weather:",
+    "sliderGradient": "from-blue-500/80 to-indigo-600/80"
   }
-]
-\`\`\`
-
-**Available platforms:** twitter, linkedin, github, instagram, email
-
-### 3. Customization Options
-Toggle features on/off:
-
-\`\`\`json
-"customization": {
-  "showSocialLinks": true,
-  "showHireButton": true,
-  "cardMaxWidth": "lg",
-  "animationDuration": 0.5
 }
-\`\`\`
 
-## Quick Setup Steps
+📝 Explanation
 
-1. Replace the image in `public/images/avatar.png` with your photo
-2. Edit `data/profile-config.json` with your information
-3. Save the file - changes will appear automatically!
+baseWeather → Main weather options (Sunny, Rainy, etc.)
 
-## Tips
+label: Display name
 
-- Keep descriptions under 150 characters for best appearance
-- Use high-quality square images (400x400px recommended)
-- Test your social media links to ensure they work
-- Use professional email addresses for the email platform
+icon: Emoji or icon class
+
+background: Tailwind gradient classes
+
+weatherEffects → Extra effects (Cloudy, Lightning, etc.)
+
+emoji: Symbol displayed
+
+size: Tailwind text size (e.g. text-6xl)
+
+position: Tailwind positioning (top, left, right)
+
+opacity: Tailwind opacity class
+
+animation: Motion config
+
+x, y: Movement path
+
+opacity, scale, rotate: Transformations
+
+duration: Seconds per cycle
+
+delay / repeatDelay: Timing controls
+
+ui → Labels and style
+
+title: App title
+
+baseLabel, effectsLabel, currentWeatherLabel: Section texts
+
+sliderGradient: Tailwind gradient classes for toggles
+
