@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Glass Effect | Profile Card - ready_ui",
+  title: "Glass Effect | Weather Control Panel - ready_ui",
   description: "Created by @ready_ui",
 };
 
