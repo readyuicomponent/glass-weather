@@ -1,0 +1,39 @@
+{
+  "profile": {
+    "name": "Alex Johnson",
+    "title": "VR/AR Developer & Designer",
+    "description": "Passionate about creating immersive digital experiences that bridge the gap between reality and imagination. Specializing in cutting-edge VR/AR applications.",
+    "profileImage": "/images/avatar.png",
+    "hireUrl": "/contact"
+  },
+
+  "socialLinks": [
+    {
+      "platform": "twitter",
+      "url": "https://twitter.com/alexjohnson"
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/alexjohnson"
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/alexjohnson"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/alexjohnson"
+    },
+    {
+      "platform": "email",
+      "url": "mailto:alex@example.com"
+    }
+  ],
+
+  "customization": {
+    "showSocialLinks": true,
+    "showHireButton": true,
+    "cardMaxWidth": "lg",
+    "animationDuration": 0.5
+  }
+}
